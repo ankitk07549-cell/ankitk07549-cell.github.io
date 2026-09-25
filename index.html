@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>मेरी वेबसाइट</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f7fb;
+      color: #222;
+    }
+
+    header {
+      background: #ffffff;
+      padding: 18px 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #222;
+      margin-left: 18px;
+    }
+
+    .hero {
+      min-height: 75vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 600px;
+      margin-bottom: 25px;
+      line-height: 1.6;
+    }
+
+    .button {
+      display: inline-block;
+      background: #2563eb;
+      color: white;
+      padding: 13px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .about {
+      background: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .about h2 {
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+
+    .about p {
+      max-width: 650px;
+      margin: auto;
+      line-height: 1.7;
+    }
+
+    footer {
+      background: #111827;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      nav a {
+        margin-left: 8px;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">मेरी वेबसाइट</div>
+
+    <nav>
+      <a href="#home">होम</a>
+      <a href="#about">मेरे बारे में</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <h1>मेरी वेबसाइट में आपका स्वागत है</h1>
+
+    <p>
+      यह मेरी नई वेबसाइट है।
+      यहाँ मैं अपने प्रोजेक्ट, काम और जानकारी साझा करूँगा।
+    </p>
+
+    <a href="#about" class="button">और जानें</a>
+  </section>
+
+  <section class="about" id="about">
+    <h2>मेरे बारे में</h2>
+
+    <p>
+      इस जगह पर हम आपके बारे में जानकारी,
+      आपके काम और आपके प्रोजेक्ट की जानकारी जोड़ सकते हैं।
+    </p>
+  </section>
+
+  <footer>
+    © 2026 मेरी वेबसाइट
+  </footer>
+
+</body>
+</html>
