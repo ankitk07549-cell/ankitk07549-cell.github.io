@@ -15,17 +15,23 @@
 
     body {
       font-family: Arial, sans-serif;
-      background: #f5f7fb;
-      color: #222;
+      color: white;
+      min-height: 100vh;
+      background-image:
+        linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+        url("hd-satoru-gojo-wallpaper-with-fire-and-blue-sparks-sr07052610-cover.webp");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
     }
 
     header {
-      background: #ffffff;
-      padding: 18px 25px;
+      padding: 20px 25px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      background: rgba(0, 0, 0, 0.35);
     }
 
     .logo {
@@ -34,76 +40,45 @@
     }
 
     nav a {
+      color: white;
       text-decoration: none;
-      color: #222;
       margin-left: 18px;
     }
 
     .hero {
-      min-height: 75vh;
+      min-height: 80vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
-      padding: 30px 20px;
+      padding: 30px;
     }
 
     .hero h1 {
-      font-size: 42px;
+      font-size: 45px;
       margin-bottom: 15px;
     }
 
     .hero p {
-      font-size: 18px;
-      max-width: 600px;
+      font-size: 20px;
       margin-bottom: 25px;
-      line-height: 1.6;
     }
 
     .button {
       display: inline-block;
-      background: #2563eb;
-      color: white;
-      padding: 13px 25px;
-      border-radius: 8px;
+      padding: 12px 25px;
+      background: white;
+      color: black;
       text-decoration: none;
+      border-radius: 25px;
       font-weight: bold;
     }
 
-    .about {
-      background: white;
-      padding: 60px 20px;
-      text-align: center;
-    }
-
-    .about h2 {
-      font-size: 30px;
-      margin-bottom: 15px;
-    }
-
-    .about p {
-      max-width: 650px;
-      margin: auto;
-      line-height: 1.7;
-    }
-
     footer {
-      background: #111827;
-      color: white;
       text-align: center;
       padding: 20px;
-    }
-
-    @media (max-width: 600px) {
-      .hero h1 {
-        font-size: 32px;
-      }
-
-      nav a {
-        margin-left: 8px;
-        font-size: 14px;
-      }
+      background: rgba(0, 0, 0, 0.4);
     }
   </style>
 </head>
@@ -111,36 +86,25 @@
 <body>
 
   <header>
-    <div class="logo">मेरी वेबसाइट</div>
+    <div class="logo">Ankit Kumar</div>
 
     <nav>
-      <a href="#home">होम</a>
-      <a href="#about">मेरे बारे में</a>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
     </nav>
   </header>
 
-  <section class="hero" id="home">
-    <h1>मेरी वेबसाइट में आपका स्वागत है</h1>
+  <section class="hero">
+    <h1>स्वागत है मेरी वेबसाइट पर</h1>
 
-    <p>
-      यह मेरी नई वेबसाइट है।
-      यहाँ मैं अपने प्रोजेक्ट, काम और जानकारी साझा करूँगा।
-    </p>
+    <p>यह मेरी अपनी वेबसाइट है 🚀</p>
 
-    <a href="#about" class="button">और जानें</a>
-  </section>
-
-  <section class="about" id="about">
-    <h2>मेरे बारे में</h2>
-
-    <p>
-      इस जगह पर हम आपके बारे में जानकारी,
-      आपके काम और आपके प्रोजेक्ट की जानकारी जोड़ सकते हैं।
-    </p>
+    <a href="#" class="button">शुरू करें</a>
   </section>
 
   <footer>
-    © 2026 मेरी वेबसाइट
+    © 2026 Ankit Kumar
   </footer>
 
 </body>
