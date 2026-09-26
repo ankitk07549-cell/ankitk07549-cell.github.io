@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>मेरी वेबसाइट</title>
+  <title>My Website</title>
 
   <style>
     * {
@@ -15,23 +15,17 @@
 
     body {
       font-family: Arial, sans-serif;
-      color: white;
-      min-height: 100vh;
-      background-image:
-        linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
-        url("hd-satoru-gojo-wallpaper-with-fire-and-blue-sparks-sr07052610-cover.webp");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
+      background: #f5f7fb;
+      color: #222;
     }
 
     header {
-      padding: 20px 25px;
+      background: white;
+      padding: 18px 25px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: rgba(0, 0, 0, 0.35);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
     }
 
     .logo {
@@ -39,73 +33,158 @@
       font-weight: bold;
     }
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 18px;
-    }
-
     .hero {
-      min-height: 80vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      min-height: 75vh;
+      padding: 50px 20px;
       text-align: center;
-      padding: 30px;
+
+      background-image: url("background.jpg");
+      background-size: cover;
+      background-position: center;
     }
 
+    /* HELLO SIR */
     .hero h1 {
-      font-size: 45px;
+      font-size: 48px;
+      font-weight: 900;
+      color: #111;
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 4px white;
+    }
+
+    /* Welcome text */
+    .welcome {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: #222;
+      font-weight: normal;
+    }
+
+    /* Instagram */
+    .instagram-line {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .instagram-line a {
+      color: #e1306c;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    /* Date Sheet */
+    .date-title {
+      font-size: 30px;
+      font-weight: bold;
       margin-bottom: 15px;
     }
 
-    .hero p {
-      font-size: 20px;
-      margin-bottom: 25px;
-    }
-
-    .button {
-      display: inline-block;
-      padding: 12px 25px;
+    .date-sheet {
+      width: 95%;
+      max-width: 900px;
+      margin: auto;
       background: white;
-      color: black;
-      text-decoration: none;
-      border-radius: 25px;
-      font-weight: bold;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.3);
     }
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: rgba(0, 0, 0, 0.4);
+    .date-sheet img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 5px;
+    }
+
+    /* Apps */
+    .app-title {
+      font-size: 30px;
+      font-weight: bold;
+      margin: 35px 0 20px;
+    }
+
+    .apps {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .app {
+      background: white;
+      color: #222;
+      text-decoration: none;
+      padding: 15px 22px;
+      border-radius: 12px;
+      font-size: 17px;
+      font-weight: bold;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    }
+
+    .app:hover {
+      transform: scale(1.05);
     }
   </style>
 </head>
 
 <body>
 
-  <header>
-    <div class="logo">Ankit Kumar</div>
+  <div class="hero">
 
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
-    </nav>
-  </header>
+    <h1>HELLO SIR</h1>
 
-  <section class="hero">
-    <h1>स्वागत है मेरी वेबसाइट पर</h1>
+    <div class="welcome">
+      Welcome to my website
+    </div>
 
-    <p>यह मेरी अपनी वेबसाइट है 🚀</p>
+    <div class="instagram-line">
+      My Instagram Link:
+      <a href="https://www.instagram.com/invites/contact/?utm_content=s7inj8z&stkn=18qjtdn9zplkk"
+         target="_blank">
+        Instagram
+      </a>
+    </div>
 
-    <a href="#" class="button">शुरू करें</a>
-  </section>
+    <div class="date-title">
+      Date Sheet
+    </div>
 
-  <footer>
-    © 2026 Ankit Kumar
-  </footer>
+    <!-- Date Sheet photo सीधे दिखाई देगी -->
+    <div class="date-sheet">
+      <img src="date-sheet.jpg" alt="Date Sheet">
+    </div>
+
+    <div class="app-title">
+      Apps
+    </div>
+
+    <div class="apps">
+
+      <a class="app" href="https://www.youtube.com/" target="_blank">
+        ▶️ YouTube
+      </a>
+
+      <a class="app" href="https://www.capcut.com/" target="_blank">
+        ✂️ CapCut
+      </a>
+
+      <a class="app" href="#" target="_blank">
+        📱 VPN
+      </a>
+
+      <a class="app" href="https://www.vlognow.me/" target="_blank">
+        🎬 VN
+      </a>
+
+      <a class="app" href="#" target="_blank">
+        📱 PMP
+      </a>
+
+    </div>
+
+  </div>
 
 </body>
 </html>
+
+    
