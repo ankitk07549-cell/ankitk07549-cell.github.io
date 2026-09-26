@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>मेरी वेबसाइट</title>
+  <title>My Website</title>
 
   <style>
     * {
@@ -16,121 +16,148 @@
     body {
       font-family: Arial, sans-serif;
       color: #000;
+
+      background-image:
+        linear-gradient(rgba(0,0,0,0.10), rgba(0,0,0,0.10)),
+        url("file_000000006be0820894363ef68bddc9bd.png");
+
+      background-size: cover;
+      background-position: center top;
+      background-attachment: fixed;
+
       min-height: 100vh;
-      background: url("background.jpg") center center / cover fixed no-repeat;
     }
 
     .page {
+      width: 100%;
       min-height: 100vh;
-      padding: 35px 5%;
+      padding: 45px 5%;
     }
 
     h1 {
-      font-size: clamp(55px, 8vw, 110px);
+      font-size: clamp(55px, 9vw, 110px);
       font-weight: 900;
       line-height: 0.95;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
 
     .welcome {
-      font-size: clamp(32px, 5vw, 62px);
+      font-size: clamp(28px, 4.5vw, 58px);
       font-weight: 800;
-      margin-bottom: 22px;
+      margin-bottom: 12px;
     }
 
     .instagram {
-      font-size: clamp(25px, 3.5vw, 42px);
+      font-size: clamp(24px, 3.8vw, 48px);
       font-weight: 800;
-      margin-bottom: 48px;
+      margin-bottom: 22px;
+
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      align-items: center;
     }
 
     .instagram a {
-      color: #0645ff;
+      color: #000;
       text-decoration: underline;
       word-break: break-all;
     }
 
     .date-title {
-      font-size: clamp(30px, 4vw, 48px);
+      font-size: clamp(28px, 4vw, 50px);
       font-weight: 800;
-      margin-bottom: 16px;
+      margin-bottom: 12px;
     }
 
-    .top-photos {
-      display: flex;
-      gap: 28px;
-      align-items: flex-start;
-      flex-wrap: wrap;
-    }
-
-    .date-photo,
-    .extra-photo {
-      width: min(100%, 610px);
-      border: 3px solid white;
-      border-radius: 25px;
+    .date-sheet {
+      width: min(650px, 100%);
+      border-radius: 28px;
+      border: 4px solid white;
       display: block;
-      box-shadow: 0 5px 18px rgba(0,0,0,0.25);
+      margin-bottom: 45px;
+
+      box-shadow: 0 8px 25px rgba(0,0,0,0.35);
     }
 
     .apps {
       display: flex;
-      gap: 70px;
+      gap: 45px;
       flex-wrap: wrap;
-      margin-top: 58px;
-      padding-left: 20px;
+      align-items: flex-start;
     }
 
-    .app {
-      width: 300px;
+    .app-card {
+      width: 290px;
       text-align: center;
     }
 
-    .app img {
-      width: 205px;
-      height: 205px;
+    .app-image {
+      width: 230px;
+      height: 230px;
       object-fit: cover;
-      border-radius: 38px;
-      border: 3px solid white;
+
+      border-radius: 35px;
       display: block;
-      margin: 0 auto 7px;
-      box-shadow: 0 5px 18px rgba(0,0,0,0.35);
+      margin: 0 auto 8px;
+
+      border: 3px solid white;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.35);
     }
 
     .app-name {
-      background: #07192f;
+      background: #07172e;
       color: white;
-      border-radius: 12px;
-      padding: 9px 8px;
+
       font-size: 24px;
       font-weight: 800;
-      margin-bottom: 7px;
+
+      padding: 9px 12px;
+      border-radius: 10px;
+
+      margin-bottom: 8px;
     }
 
-    .download {
+    .download-btn {
       display: block;
-      background: #1267e8;
+
+      background: #087cf5;
       color: white;
+
       text-decoration: none;
-      border: 2px solid white;
-      border-radius: 30px;
-      padding: 12px 18px;
+
       font-size: 20px;
       font-weight: 800;
+
+      padding: 13px 15px;
+      border-radius: 30px;
+
+      border: 2px solid white;
+
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     }
 
-    @media (max-width: 700px) {
+    .download-btn:hover {
+      background: #005fc7;
+    }
+
+    @media (max-width: 600px) {
+
       .page {
         padding: 25px 18px;
       }
 
       .apps {
-        gap: 35px;
+        gap: 30px;
         justify-content: center;
-        padding-left: 0;
       }
 
-      .app {
-        width: min(300px, 90vw);
+      .app-card {
+        width: 260px;
+      }
+
+      .date-sheet {
+        margin-bottom: 30px;
       }
     }
   </style>
@@ -138,7 +165,7 @@
 
 <body>
 
-  <main class="page">
+  <div class="page">
 
     <h1>Hello Sir</h1>
 
@@ -147,55 +174,84 @@
     </div>
 
     <div class="instagram">
-      My Instagram
-      <a href="YOUR_INSTAGRAM_LINK" target="_blank">
-        Link
+
+      <span>My Instagram Link</span>
+
+      <a
+        href="https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=s7inj8z"
+        target="_blank">
+        My Instagram
       </a>
+
     </div>
+
 
     <div class="date-title">
       Date Sheet
     </div>
 
-    <div class="top-photos">
-      <img class="date-photo" src="datesheet.jpg" alt="Date Sheet">
-      <img class="extra-photo" src="extra.jpg" alt="Photo">
-    </div>
+    <img
+      src="IMG-20260925-WA0016.jpg"
+      alt="Date Sheet"
+      class="date-sheet">
 
-    <section class="apps">
 
-      <div class="app">
-        <img src="vn.jpg" alt="VN Premium">
+    <div class="apps">
+
+
+      <!-- VN PREMIUM -->
+
+      <div class="app-card">
+
+        <img
+          src="Screenshot_20260926_210400.jpg"
+          alt="VN Premium"
+          class="app-image">
 
         <div class="app-name">
           VN Premium
         </div>
 
-        <a class="download"
-           href="VN Primium@Gomod1.apk"
-           download>
-          ⬇️ Click to Download
+        <a
+          href="VN Primium@Gomod1.apk"
+          download
+          class="download-btn">
+
+          ⬇ Click to Download
+
         </a>
+
       </div>
 
 
-      <div class="app">
-        <img src="fampay.jpg" alt="Fampay Pro">
+      <!-- TRIO APP -->
+
+      <div class="app-card">
+
+        <img
+          src="Screenshot_20260926_210503.jpg"
+          alt="Trio App"
+          class="app-image">
 
         <div class="app-name">
-          Fampay Pro
+          Trio App
         </div>
 
-        <a class="download"
-           href="Fampay Pro@GOMOD1.apk"
-           download>
-          ⬇️ Click to Download
+        <a
+          href="Trio App.apk"
+          download
+          class="download-btn">
+
+          ⬇ Click to Download
+
         </a>
+
       </div>
 
-    </section>
 
-  </main>
+    </div>
+
+  </div>
 
 </body>
 </html>
