@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>My Website</title>
+  <title>मेरी वेबसाइट</title>
 
   <style>
     * {
@@ -15,17 +15,25 @@
 
     body {
       font-family: Arial, sans-serif;
-      background: #f5f7fb;
       color: #222;
+
+      background-image:
+        linear-gradient(rgba(255,255,255,0.72), rgba(255,255,255,0.72)),
+        url("background.jpg");
+
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      min-height: 100vh;
     }
 
     header {
-      background: white;
+      background: rgba(255,255,255,0.92);
       padding: 18px 25px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
     }
 
     .logo {
@@ -35,156 +43,165 @@
 
     .hero {
       min-height: 75vh;
-      padding: 50px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 45px 15px;
       text-align: center;
-
-      background-image: url("background.jpg");
-      background-size: cover;
-      background-position: center;
     }
 
-    /* HELLO SIR */
     .hero h1 {
-      font-size: 48px;
+      font-size: 42px;
       font-weight: 900;
       color: #111;
-      margin-bottom: 15px;
-      text-shadow: 2px 2px 4px white;
+      margin-bottom: 12px;
     }
 
-    /* Welcome text */
     .welcome {
-      font-size: 24px;
-      margin-bottom: 20px;
-      color: #222;
-      font-weight: normal;
+      font-size: 23px;
+      font-weight: bold;
+      margin-bottom: 18px;
     }
 
-    /* Instagram */
-    .instagram-line {
-      font-size: 18px;
+    .instagram {
+      margin-bottom: 30px;
+      font-size: 16px;
+      word-break: break-all;
+    }
+
+    .instagram a {
+      color: #0066cc;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .section-title {
+      font-size: 30px;
+      font-weight: 900;
+      margin-bottom: 18px;
+    }
+
+    .datesheet {
+      width: min(700px, 95%);
+      background: rgba(255,255,255,0.94);
+      padding: 12px;
+      border-radius: 14px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.20);
       margin-bottom: 30px;
     }
 
-    .instagram-line a {
-      color: #e1306c;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    /* Date Sheet */
-    .date-title {
-      font-size: 30px;
-      font-weight: bold;
-      margin-bottom: 15px;
-    }
-
-    .date-sheet {
-      width: 95%;
-      max-width: 900px;
-      margin: auto;
-      background: white;
-      padding: 10px;
-      border-radius: 10px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.3);
-    }
-
-    .date-sheet img {
+    .datesheet img {
       width: 100%;
-      height: auto;
       display: block;
-      border-radius: 5px;
-    }
-
-    /* Apps */
-    .app-title {
-      font-size: 30px;
-      font-weight: bold;
-      margin: 35px 0 20px;
+      border-radius: 10px;
     }
 
     .apps {
+      width: min(700px, 95%);
       display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 15px;
+      flex-direction: column;
+      gap: 18px;
     }
 
-    .app {
-      background: white;
-      color: #222;
+    .app-card {
+      background: rgba(255,255,255,0.95);
+      padding: 22px;
+      border-radius: 15px;
+      box-shadow: 0 5px 18px rgba(0,0,0,0.20);
+    }
+
+    .app-card h2 {
+      font-size: 24px;
+      margin-bottom: 14px;
+    }
+
+    .download-btn {
+      display: inline-block;
+      background: #111;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
       text-decoration: none;
-      padding: 15px 22px;
-      border-radius: 12px;
-      font-size: 17px;
       font-weight: bold;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+      transition: 0.2s;
     }
 
-    .app:hover {
-      transform: scale(1.05);
+    .download-btn:hover {
+      background: #333;
+      transform: scale(1.03);
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 34px;
+      }
+
+      .welcome {
+        font-size: 20px;
+      }
+
+      .section-title {
+        font-size: 26px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <div class="hero">
+  <header>
+    <div class="logo">मेरी वेबसाइट</div>
+  </header>
 
-    <h1>HELLO SIR</h1>
+  <section class="hero">
+
+    <h1>Hello Sir</h1>
 
     <div class="welcome">
       Welcome to my website
     </div>
 
-    <div class="instagram-line">
-      My Instagram Link:
-      <a href="https://www.instagram.com/invites/contact/?utm_content=s7inj8z&stkn=18qjtdn9zplkk"
+    <div class="instagram">
+      <strong>My Instagram Link:</strong>
+      <a href="https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=s7inj8z"
          target="_blank">
-        Instagram
+        https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=copy_link&utm_content=s7inj8z
       </a>
     </div>
 
-    <div class="date-title">
+    <div class="section-title">
       Date Sheet
     </div>
 
-    <!-- Date Sheet photo सीधे दिखाई देगी -->
-    <div class="date-sheet">
-      <img src="date-sheet.jpg" alt="Date Sheet">
-    </div>
-
-    <div class="app-title">
-      Apps
+    <div class="datesheet">
+      <img src="datesheet.jpg" alt="Date Sheet">
     </div>
 
     <div class="apps">
 
-      <a class="app" href="https://www.youtube.com/" target="_blank">
-        ▶️ YouTube
-      </a>
+      <div class="app-card">
+        <h2>VN Premium</h2>
 
-      <a class="app" href="https://www.capcut.com/" target="_blank">
-        ✂️ CapCut
-      </a>
+        <a class="download-btn"
+           href="VN-Premium.apk"
+           download>
+          Click to Download
+        </a>
+      </div>
 
-      <a class="app" href="#" target="_blank">
-        📱 VPN
-      </a>
+      <div class="app-card">
+        <h2>Fampay Pro</h2>
 
-      <a class="app" href="https://www.vlognow.me/" target="_blank">
-        🎬 VN
-      </a>
-
-      <a class="app" href="#" target="_blank">
-        📱 PMP
-      </a>
+        <a class="download-btn"
+           href="Fampay-Pro.apk"
+           download>
+          Click to Download
+        </a>
+      </div>
 
     </div>
 
-  </div>
+  </section>
 
 </body>
-</html>
-
-    
+</html>   
