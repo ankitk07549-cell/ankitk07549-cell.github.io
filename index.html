@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>My Website</title>
 
   <style>
@@ -31,9 +32,9 @@
 
     .lock-box {
       width: 100%;
-      max-width: 380px;
-      text-align: center;
+      max-width: 400px;
       padding: 30px 22px;
+      text-align: center;
       border: 1px solid #ffffff55;
       border-radius: 20px;
       background: #ffffff12;
@@ -51,18 +52,37 @@
     }
 
     .lock-box p {
-      margin-bottom: 20px;
       color: #e0eaff;
+      margin-bottom: 20px;
+    }
+
+    /* PASSWORD INPUT AND EYE BUTTON */
+    .password-wrapper {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 14px;
     }
 
     #passwordInput {
-      width: 100%;
+      flex: 1;
+      width: 0;
+      min-width: 0;
       padding: 14px;
       border: 2px solid #ffffff55;
       border-radius: 10px;
       font-size: 17px;
-      margin-bottom: 14px;
       outline: none;
+    }
+
+    #togglePassword {
+      width: 55px;
+      flex-shrink: 0;
+      border: none;
+      border-radius: 10px;
+      background: white;
+      color: #07172e;
+      font-size: 23px;
+      cursor: pointer;
     }
 
     #unlockButton {
@@ -86,10 +106,6 @@
     /* WEBSITE CONTENT */
     #websiteContent {
       display: none;
-    }
-
-    body.unlocked {
-      background: #07172e;
     }
 
     .page {
@@ -116,6 +132,7 @@
       font-size: clamp(28px, 4.5vw, 58px);
       font-weight: 800;
       margin-bottom: 12px;
+      color: white;
     }
 
     .instagram {
@@ -138,6 +155,7 @@
       font-size: clamp(28px, 4vw, 50px);
       font-weight: 800;
       margin-bottom: 12px;
+      color: white;
     }
 
     .My-girl-friend {
@@ -146,7 +164,7 @@
       border: 4px solid white;
       display: block;
       margin-bottom: 45px;
-      box-shadow: 0 8px 25px #0006;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.35);
       cursor: pointer;
     }
 
@@ -170,7 +188,7 @@
       display: block;
       margin: 0 auto 8px;
       border: 3px solid white;
-      box-shadow: 0 8px 20px #0006;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.35);
     }
 
     .app-name {
@@ -193,12 +211,17 @@
       padding: 13px 15px;
       border-radius: 30px;
       border: 2px solid white;
-      box-shadow: 0 5px 15px #0005;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    .download-btn:hover {
+      background: #005fc7;
     }
 
     @media (max-width: 600px) {
       .page {
         padding: 25px 18px;
+        background-attachment: scroll;
       }
 
       .apps {
@@ -219,32 +242,46 @@
 
 <body>
 
-  <!-- PASSWORD SCREEN -->
+  <!-- PASSWORD LOCK -->
   <div id="lockScreen">
     <div class="lock-box">
+
       <div class="lock-icon">🔒</div>
+
       <h2>Website Locked</h2>
       <p>Enter password to open this website</p>
 
       <form id="unlockForm">
-        <input
-          type="password"
-          id="passwordInput"
-          placeholder="Enter your password"
-          autocomplete="current-password"
-          required
-        >
+
+        <div class="password-wrapper">
+          <input
+            type="password"
+            id="passwordInput"
+            placeholder="Enter your password"
+            autocomplete="current-password"
+            required
+          >
+
+          <button
+            type="button"
+            id="togglePassword"
+            aria-label="Show password"
+            aria-pressed="false"
+          >👁️</button>
+        </div>
 
         <button id="unlockButton" type="submit">
           🔓 Unlock Website
         </button>
+
       </form>
 
       <div id="errorMessage" role="alert"></div>
+
     </div>
   </div>
 
-  <!-- YOUR WEBSITE -->
+  <!-- WEBSITE -->
   <div id="websiteContent">
     <div class="page">
 
@@ -256,6 +293,7 @@
 
       <div class="instagram">
         <span>My Instagram Link</span>
+
         <a
           href="https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&amp;utm_medium=copy_link&amp;utm_content=s7inj8z"
           target="_blank"
@@ -264,9 +302,14 @@
         </a>
       </div>
 
-      <div class="date-title">My girl friend</div>
+      <div class="date-title">
+        My girl friend
+      </div>
 
-      <a href="IMG_20261017_002752.jpg" target="_blank">
+      <a
+        href="IMG_20261017_002752.jpg"
+        target="_blank"
+        rel="noopener noreferrer">
         <img
           src="IMG_20261017_002752.jpg"
           alt="My girl friend"
@@ -275,13 +318,17 @@
 
       <div class="apps">
 
+        <!-- VN PREMIUM -->
         <div class="app-card">
+
           <img
             src="Screenshot_20260926_210400.jpg"
             alt="VN Premium"
             class="app-image">
 
-          <div class="app-name">VN Premium</div>
+          <div class="app-name">
+            VN Premium
+          </div>
 
           <a
             href="VN Primium@Gomod1.apk"
@@ -289,15 +336,20 @@
             class="download-btn">
             ⬇ Click to Download
           </a>
+
         </div>
 
+        <!-- FAMPAY APP -->
         <div class="app-card">
+
           <img
             src="Screenshot_20260926_210503.jpg"
             alt="fampay App"
             class="app-image">
 
-          <div class="app-name">fampay primium App</div>
+          <div class="app-name">
+            fampay primium App
+          </div>
 
           <a
             href="fampay App.apk"
@@ -305,6 +357,7 @@
             class="download-btn">
             ⬇ Click to Download
           </a>
+
         </div>
 
       </div>
@@ -312,20 +365,40 @@
   </div>
 
   <script>
-    // Apna password neeche wali line mein likho.
-    const correctPassword = "YAHAN_APNA_PASSWORD_LIKHO";
+    // WEBSITE PASSWORD
+    const correctPassword = "Manvi@2023";
 
     const form = document.getElementById("unlockForm");
     const input = document.getElementById("passwordInput");
     const error = document.getElementById("errorMessage");
+    const togglePassword = document.getElementById("togglePassword");
 
+    // SHOW / HIDE PASSWORD
+    togglePassword.addEventListener("click", function() {
+      const isHidden = input.type === "password";
+
+      input.type = isHidden ? "text" : "password";
+      togglePassword.textContent = isHidden ? "🙈" : "👁️";
+
+      togglePassword.setAttribute(
+        "aria-label",
+        isHidden ? "Hide password" : "Show password"
+      );
+
+      togglePassword.setAttribute(
+        "aria-pressed",
+        String(isHidden)
+      );
+    });
+
+    // CHECK PASSWORD
     form.addEventListener("submit", function(event) {
       event.preventDefault();
 
       if (input.value === correctPassword) {
         document.getElementById("lockScreen").style.display = "none";
         document.getElementById("websiteContent").style.display = "block";
-        document.body.classList.add("unlocked");
+        error.textContent = "";
       } else {
         error.textContent = "Wrong password! Try again.";
         input.value = "";
